@@ -28,6 +28,10 @@ body {
       rgba(27, 31, 35, 0.8) 100%
     ),
     url("media/1406309056147.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--text);
   min-height: 100vh;
   padding: 8rem;
