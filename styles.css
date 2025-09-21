@@ -86,11 +86,61 @@ section {
 }
 
 .welcome-section {
-  text-align: center;
+  background: rgba(44, 48, 54, 0.9);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
 }
 
 .welcome-section p {
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  color: var(--text);
+}
+
+.welcome-section p:last-child {
+  margin-bottom: 0;
+}
+
+.skills-section {
+  background: rgba(44, 48, 54, 0.9);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+}
+
+.skills-section h2 {
+  font-size: 1.8rem;
+}
+
+.skills-section ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.skills-section li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.skills-section li::before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: var(--primary);
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .social-links {
@@ -109,7 +159,7 @@ section {
   text-decoration: none;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(58, 58, 58, 0.8);
   transition: all 0.3s ease;
   font-size: 1rem;
 }
@@ -123,17 +173,16 @@ section {
 }
 
 .social-link.twitter:hover {
-  background: color-mix(in srgb, var(--twitter-blue) 20%, transparent);
+  background: color-mix(in srgb, var(--twitter-blue) 30%, transparent);
   color: var(--twitter-blue);
 }
-
 .social-link.bluesky:hover {
-  background: color-mix(in srgb, var(--bluesky-blue) 20%, transparent);
+  background: color-mix(in srgb, var(--bluesky-blue) 30%, transparent);
   color: var(--bluesky-blue);
 }
 
 .social-link.ccc:hover {
-  background: color-mix(in srgb, var(--ccc-orange) 20%, transparent);
+  background: color-mix(in srgb, var(--ccc-orange) 30%, transparent);
   color: var(--ccc-orange);
 }
 
@@ -253,9 +302,32 @@ audio::-webkit-media-controls-time-remaining-display {
   opacity: 1;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   body {
     padding: 1rem;
+  }
+
+  .welcome-section,
+  .skills-section {
+    padding: 1.5rem;
+  }
+
+  .welcome-section p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .skills-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-section ul {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-section li {
+    font-size: 1rem;
   }
 
   .profile-image {
