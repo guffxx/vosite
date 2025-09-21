@@ -40,8 +40,9 @@ header {
 
 .profile-image {
   width: 100%;
-  max-width: 400px;
-  height: auto;
+  max-width: 500px;
+  height: 100%;
+  max-height: auto;
   border-radius: 10%;
   object-fit: cover;
   opacity: 0.9;
@@ -146,23 +147,22 @@ footer p {
 
 /* Voice Acting Page Specifics */
 .voice-demos-section {
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   border-radius: 16px;
 }
 
 .voice-demos-section h2 {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 2.2rem;
-  color: var(--text);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.7rem;
+  color: var(--primary);
 }
 
 .audio-demos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 0.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .demo-item {
@@ -186,15 +186,24 @@ footer p {
 
 .demo-item h3 {
   font-size: 1.3rem;
-  margin-bottom: 1rem;
   color: var(--primary);
 }
 
 .demo-description {
   color: var(--text);
   font-size: 0.9rem;
-  margin-top: 0.8rem;
   opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .audio-demos {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  body {
+    padding: 2rem;
+  }
 }
 
 audio {
@@ -240,41 +249,6 @@ audio::-webkit-media-controls-time-remaining-display {
   opacity: 1;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  body {
-    padding: 2rem 1rem;
-  }
-
-  header {
-    margin-bottom: 1.5rem;
-  }
-
-  .profile-image {
-    max-width: 280px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  section {
-    padding: 1.5rem;
-  }
-
-  .welcome-section {
-    font-size: 1.2rem;
-  }
-
-  .audio-demos {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 480px) {
   body {
     padding: 1rem;
@@ -293,8 +267,7 @@ audio::-webkit-media-controls-time-remaining-display {
     padding: 1rem;
   }
 
-  .social-link {
-    width: 100%;
-    justify-content: center;
+  .social-links {
+    gap: 1rem;
   }
 }
