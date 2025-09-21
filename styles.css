@@ -51,16 +51,7 @@ header {
   object-fit: cover;
   opacity: 0.9;
   transition: opacity 0.3s ease;
-}
-
-.profile-image:hover {
-  opacity: 1;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
@@ -69,14 +60,8 @@ h2 {
   color: var(--primary);
 }
 
-h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-}
-
 main {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -103,38 +88,12 @@ section {
   color: var(--text);
 }
 
-.welcome-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-}
-
-.welcome-section li {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: var(--text);
-  margin-bottom: 0.5rem;
-  padding-left: 1rem;
-}
-
-.welcome-section li:last-child {
-  margin-bottom: 0;
-}
-
-.welcome-section p:last-child {
-  margin-bottom: 0;
-}
-
 .skills-section {
   background: rgba(44, 48, 54, 0.9);
   border: 1px solid var(--border-color);
   padding: 2.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.skills-section h2 {
-  font-size: 1.8rem;
 }
 
 .skills-section ul {
@@ -204,6 +163,7 @@ section {
   background: rgba(58, 58, 58, 0.8);
   transition: all 0.3s ease;
   font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .social-link i {
@@ -212,43 +172,17 @@ section {
 
 .social-link:hover {
   transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
 }
 
-.social-link.twitter:hover {
-  background: color-mix(in srgb, var(--twitter-blue) 30%, transparent);
-  color: var(--twitter-blue);
-}
-.social-link.bluesky:hover {
-  background: color-mix(in srgb, var(--bluesky-blue) 30%, transparent);
-  color: var(--bluesky-blue);
+.email-link {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
-.social-link.ccc:hover {
-  background: color-mix(in srgb, var(--ccc-orange) 30%, transparent);
-  color: var(--ccc-orange);
-}
-
-footer {
-  text-align: center;
-  padding: 3rem 0;
-  margin-top: 2rem;
-  border-top: 1px solid var(--border-color);
-}
-
-footer p {
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
-
-/* Voice Acting Page Specifics */
 .voice-demos-section {
   padding: 2rem 2rem;
   border-radius: 16px;
-}
-
-.voice-demos-section h2 {
-  font-size: 1.7rem;
-  color: var(--primary);
 }
 
 .audio-demos {
@@ -266,7 +200,7 @@ footer p {
     rgba(27, 31, 35, 0.8) 0%,
     rgba(27, 31, 35, 0.8) 100%
   );
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 12px;
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
@@ -288,17 +222,6 @@ footer p {
   color: var(--text);
   font-size: 1rem;
   opacity: 0.8;
-}
-
-@media (max-width: 768px) {
-  .audio-demos {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  body {
-    padding: 2rem;
-  }
 }
 
 audio {
@@ -337,7 +260,7 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 .video-item h3 {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--primary);
   margin-bottom: 1rem;
   text-align: center;
@@ -365,8 +288,21 @@ audio::-webkit-media-controls-time-remaining-display {
   opacity: 1;
 }
 
+footer {
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
 @media (max-width: 768px) {
   body {
+    padding-top: 4rem;
     padding: 1rem;
   }
 
@@ -398,15 +334,16 @@ audio::-webkit-media-controls-time-remaining-display {
     margin: 0 auto;
   }
 
-  h1 {
-    font-size: 1.6rem;
-  }
-
   section {
     padding: 1rem;
   }
 
   .social-links {
     gap: 1rem;
+  }
+
+  .audio-demos {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
