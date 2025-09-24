@@ -180,6 +180,10 @@ section {
   text-decoration: underline;
 }
 
+.email-link:hover {
+  color: var(--text);
+}
+
 .voice-demos-section {
   padding: 2rem 2rem;
   border-radius: 16px;
