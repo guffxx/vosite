@@ -12,21 +12,22 @@
 </head>
 
 <body>
-    <header>
-        <img src="media/GUFFREVO.png" title="That's me!" alt="Voice Actor Profile Picture" class="profile-image" />
-        <h1 hidden>David Guffre - Voice Actor</h1>
-        <div class="social-links">
-            </a>
-            <a href="https://www.castingcall.club/davidguffre" title="Casting Call Club" target="_blank"
-                rel="noopener noreferrer" aria-label="Casting Call Club" class="social-link ccc">
-                <i class="fas fa-microphone"></i>
-                <span>CCC</span>
-            </a>
-        </div>
-    </header>
+    <div class="page-container">
+        <aside class="sidebar">
+            <header>
+                <img src="media/GUFFREVO.png" title="That's me!" alt="Voice Actor Profile Picture" class="profile-image" />
+                <h1 hidden>David Guffre - Voice Actor</h1>
+                <div class="social-links">
+                    </a>
+                    <a href="https://www.castingcall.club/davidguffre" title="Casting Call Club" target="_blank"
+                        rel="noopener noreferrer" aria-label="Casting Call Club" class="social-link ccc">
+                        <i class="fas fa-microphone"></i>
+                        <span>Casting Call Club</span>
+                    </a>
+                </div>
+            </header>
 
-    <main>
-        <section class="voice-demos-section">
+            <section class="voice-demos-section">
             <div class="audio-demos">
                 <div class="demo-item">
                     <h3>Character Demo 1</h3>
@@ -55,9 +56,12 @@
 
                 </div>
             </div>
-        </section>
+            </section>
+        </aside>
+
+        <main>
         <section class="welcome-section">
-            <h2>Hello and Welcome</h2>
+            <h2>Hello and Welcome!</h2>
             <p>
                 My name is David and I have been absorbed with the power of voice since I first booted up
                 Starcraft in 1998 and listened to some of the most immersing voice
@@ -76,14 +80,13 @@
             </p>
             <p>
                 If you would like to get in touch, please
-                <a href="mailto:guffre@icloud.com" title="Email: guffre@icloud.com" class="email-link">send me an
-                    email,</a> or DM me on social media for rates (samples upon request).
+                <a href="#" id="email-link" class="email-link">send me an email,</a> or DM me on social media for rates (samples upon request).
             </p>
 
         </section>
 
         <section class="skills-section">
-            <h2>Skills & Services</h2>
+            <h2>Skills & Services:</h2>
             <ul>
                 <li>My set up includes a broadcast quality studio, Audient iD4 Interface, and TLM102 Mic</li>
                 <li>I have a deeper range which I can naturally manipulate to various ranges</li>
@@ -96,21 +99,8 @@
 
             </ul>
         </section>
-        <section class="credits">
-            <h2> Credits</h2>
-            <ul>
-                <li>OraJel (Commercial) - Regional Radio Commercial</li>
-                <li>MIROWIN Studios, Boiling Steel (VR Game) - Introduction Guide</il>
-                <li>OldSkool gaming, True Justice (Video Game) - Main Character</li>
-                <li>Eleventh Hour Games, The Last Epoch (Video Game) - Lagon</li>
-                <li>Herald Entertainment (Animation) - Various Voices/Characters</li>
-                <li>Treasure Heist (Animation) - Henry Ark</li>
-                <li>Murka Studios (Online Slots) - Virtual/IRL Slot Machines</li>
-                <li>Legend of the Ravaja (Audio Book) - Tycho Pyron</li>
-            </ul>
-        </section>
         <section>
-            <h2>Video Samples</h2>
+            <h2>Video Samples:</h2>
             <div class="video-gallery">
                 <div class="video-item">
                     <h3>Window Man - Narrator</h3>
@@ -128,13 +118,39 @@
                 </div>
             </div>
         </section>
-    </main>
+        <section class="credits">
+            <h2> Credits Include:</h2>
+            <ul>
+                <li>OraJel (Commercial) - Regional Radio Commercial</li>
+                <li>MIROWIN Studios, Boiling Steel (VR Game) - Introduction Guide</il>
+                <li>OldSkool gaming, True Justice (Video Game) - Main Character</li>
+                <li>Eleventh Hour Games, The Last Epoch (Video Game) - Lagon</li>
+                <li>Herald Entertainment (Animation) - Various Voices/Characters</li>
+                <li>Treasure Heist (Animation) - Henry Ark</li>
+                <li>Murka Studios (Online Slots) - Virtual/IRL Slot Machines</li>
+                <li>Legend of the Ravaja (Audio Book) - Tycho Pyron</li>
+            </ul>
+        </section>
+        
+        </main>
+    </div>
 
     <footer>
         <p>All rights reserved. Created by David Guffre</p>
     </footer>
     <img src="https://i.imgur.com/BHt8moG.gif" title="Hello! My name is BMO!!" alt="BMO" class="bmo-gif" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script>
+        // Spam protection for email
+        document.getElementById('email-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            // Decode email: guffre@icloud.com
+            var email = 'guffre' + '@' + 'icloud.com';
+            window.location.href = 'mailto:' + email;
+        });
+        // Also set the title attribute on load
+        document.getElementById('email-link').setAttribute('title', 'Email: guffre@icloud.com');
+    </script>
 </body>
 
 </html>
