@@ -407,6 +407,7 @@ footer p {
   body {
     padding: 0;
     overflow: auto;
+    background: hidden;
   }
 
   main {
