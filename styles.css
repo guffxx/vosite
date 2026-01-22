@@ -147,13 +147,6 @@ section:hover {
 }
 
 .welcome-section {
-  background: rgba(44, 48, 54, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--card-border);
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -171,13 +164,6 @@ section:hover {
 }
 
 .skills-section {
-  background: rgba(44, 48, 54, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--card-border);
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -186,30 +172,7 @@ section:hover {
   border-color: rgba(164, 160, 185, 0.3);
 }
 
-.skills-section ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 0.5rem;
-  padding: 0;
-}
-
-.skills-section li {
-  position: relative;
-  padding-left: 2rem;
-  font-size: 1.1rem;
-  color: var(--text);
-}
-
-.skills-section li::before {
-  content: "◆";
-  position: absolute;
-  left: 0.5rem;
-  color: var(--accent);
-  font-size: 0.8rem;
-  line-height: 1;
-}
-
+.skills-section ul,
 .credits ul {
   list-style: none;
   display: grid;
@@ -218,6 +181,7 @@ section:hover {
   padding: 0;
 }
 
+.skills-section li,
 .credits li {
   position: relative;
   padding-left: 2rem;
@@ -225,6 +189,7 @@ section:hover {
   color: var(--text);
 }
 
+.skills-section li::before,
 .credits li::before {
   content: "◆";
   position: absolute;
